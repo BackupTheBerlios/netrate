@@ -1,0 +1,73 @@
+2004-08-18  Cristian Andrei Calin <kman@tfm.ro>
+	* Released 0.94
+
+2004-05-21  Cristian Andrei Calin <kman@tfm.ro>
+	* Port to FreeBSD 2.2.8, should work on the holw range of 2.2.x
+	* Added note about FreeBSD 3.x working out of the box
+	* intefaces that are not up are no longer listed
+	* added a few comments in if_freebsd.c
+	
+2004-05-15  Cristian Andrei Calin <kman@tfm.ro>
+	* Linux port no longer depends on setterm
+	* figure out which interfaces should be listed by the routes set
+	* specfile addaptation for cvs build
+	
+2004-04-16  Cristian Andrei Calin <kman@tfm.ro>
+	* Port to OpenBSD 3.4
+
+2004-04-02  Cristian Andrei Calin <kman@tfm.ro>
+	* Created toplevel Makefile to ease installation
+	* use setterm to turn the cursor off (only for Linux)
+	* added handler to clear the screen attributes at exit
+	* support for FreeBSD 4.x is back
+	
+2004-03-25  Cristian Andrei Calin <kman@tfm.ro>
+	* Ported netrate to netbsd, tested on 1.6.2
+	
+2004-03-24  Cristian Andrei Calin <kman@tfm.ro>
+	* Fixed netrate to work on FreeBSD 5.2.1 (4.x might still be broken)
+	
+2003-12-04  Cristian Andrei Calin <kman@tfm.ro>
+	* Change License to BSD
+	* At Alex's request I have readd FreeBSD support 
+	  - not tested, need to see if it stil works, maybe he'll give me 
+	  a hand with this
+	* bump to 0.92
+	
+2003-12-04  Mihai Moldovanu <mihaim@tfm.ro>
+        * Makefile changed to use CFLAGS and DESTDIR
+	* spec file added to archive 
+	* bump to 0.91
+
+2003-11-23  Cristian Andrei Calin <kman@tfm.ro>
+
+        * Program maintainer changed
+	* Bumped the version to 0.90
+	* Added support for Linux
+	* You can now press q to quit
+	* Dropped support for FreeBSD
+	
+2000-03-01  Alexandru Popa  <razor@ldc.ro>
+
+	* Upped version number to 0.07
+	* Added commandline options support
+	* Changed look of display: now you get the interface name and
+	transfer rates directly above the bars for that interface.
+
+2000-02-22  Alex Popa  <razor@ldc.ro>
+
+	* Upped the version number to 0.06 (not released/announced due to
+	network access problems)
+	* Added MIN_RATE and changed the minimum transfer rate to
+	1k/second. This should stop the annoying skips in the bars on an
+	almost idle machine, that receives few packets (like 10-50
+	bytes/sec)
+	* Changed the imports so I get only the functions I need
+	* Fixed annoying bug - incorrect parsing on a 2.0.38 kernel, with
+	aliased interfaces.  I previously parsed looking where the ":"
+	was, now I get the first 6 chars as the interface name, and the
+	rest as the values for the transfers.
+	
+2000-02-21  Alex Popa  <razor@ldc.ro>
+
+	* Version 0.05, first public release
